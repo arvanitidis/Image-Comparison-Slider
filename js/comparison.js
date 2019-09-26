@@ -7,15 +7,12 @@ $(document).ready(function() {
 		//let's loop through the sliders and initialise each of them
 		compSlider.each(function() {
 			let compSliderWidth = $(this).width() + "px";
-			$(this).find(".resize img").css({ width: compSliderWidth });
-			drags($(this).find(".divider"), $(this).find(".resize"), $(this));
+			
+			drags($(this).find(".divider"), $(this).find(".fact"), $(this));
 		});
 
 		//if the user resizes the windows lets update our variables and resize our images
-		$(window).on("resize", function() {
-			let compSliderWidth = compSlider.width() + "px";
-			compSlider.find(".resize img").css({ width: compSliderWidth });
-		});
+		
 	}
 });
 

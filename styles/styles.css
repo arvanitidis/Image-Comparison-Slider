@@ -41,14 +41,13 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.comparison-slider-wrapper .comparison-slider > img {
+.comparison-slider-wrapper .comparison-slider img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
 .comparison-slider-wrapper .comparison-slider .overlay {
-    display: none;
     position: absolute;
     width: 863px;
     padding: 10px;
@@ -58,6 +57,18 @@ body {
     transform: translate(-50%, -50%);
     left: 50vw;
     top: 50%;
+}
+
+@media screen and (max-width: 1068px) {
+  .comparison-slider-wrapper .comparison-slider .overlay {
+        width: 600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .comparison-slider-wrapper .comparison-slider .overlay {
+        width: 265px;
+  }
 }
 
 .comparison-slider .overlay h2 {
@@ -74,8 +85,33 @@ body {
     line-height: 1.3em;
 }
 
+@media screen and (max-width: 1068px) {
+  .comparison-slider .overlay h2 {
+       font-size: 50px; 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .comparison-slider .overlay h2 {
+        font-size: 45px;
+  }
+}
+
 .comparison-slider .overlay p {
         font-size: 36px;
+}
+
+@media screen and (max-width: 1068px) {
+  .comparison-slider .overlay p {
+        font-size: 24px;
+        margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .comparison-slider .overlay p {
+        font-size: 21px;
+  }
 }
 
 .comparison-slider .credits {
@@ -86,23 +122,34 @@ body {
     left: 25px;
 }
 
-@media screen and (min-width: 767px) {
-  .comparison-slider-wrapper .comparison-slider .overlay {
-        display: block;
+@media screen and (max-width: 1068px) {
+  .comparison-slider .credits {
+        font-size: 14px;
   }
 }
 
-.comparison-slider-wrapper .comparison-slider .resize {
+@media screen and (max-width: 767px) {
+  .comparison-slider .credits {
+        font-size: 12px;
+  }
+}
+
+.comparison-slider-wrapper .comparison-slider .act {
+    background: url(../images/measles_act.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.comparison-slider-wrapper .comparison-slider .fact {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 90%;
     overflow: hidden;
-}
-
-.comparison-slider-wrapper .comparison-slider .resize > img {
-    display: block;
+    background: url(../images/measles_fact.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .comparison-slider-wrapper .comparison-slider .divider {
@@ -114,7 +161,7 @@ body {
     top: 0;
     bottom: 0;
     margin-left: -1px;
-    cursor: ew-resize;
+    cursor: ew-fact;
 }
 
 .comparison-slider-wrapper .comparison-slider .divider .control-wrap:before, .comparison-slider-wrapper .comparison-slider .divider .control-wrap:after {
